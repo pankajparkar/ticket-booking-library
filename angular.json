@@ -5,6 +5,11 @@
   "projects": {
     "ticket-booking-library": {
       "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "sass"
+        }
+      },
       "root": "projects/ticket-booking-library",
       "sourceRoot": "projects/ticket-booking-library/src",
       "prefix": "lib",

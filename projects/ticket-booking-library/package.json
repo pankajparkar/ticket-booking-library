@@ -1,6 +1,6 @@
 {
   "name": "ticket-booking-library",
-  "version": "0.0.1",
+  "version": "0.0.7",
   "peerDependencies": {
     "@angular/animations": "^14.0.0-rc.0",
     "@angular/common": "^14.0.0-rc.0",
