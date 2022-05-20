@@ -1,0 +1,16 @@
+<ng-container *ngIf="movie$ | async as movie">
+  <div>
+    <div class="movie-backdrop" [ngStyle]="{ 'background-image': 'url(' + movie.backdrop + ')' }"></div>
+    <div class="container">
+      <bmc-movie-details-card
+        [movie]="movie"
+        (open)="openModal($event)"
+        (close)="modalRef.hide()"
+      ></bmc-movie-details-card>
+    </div>
+  </div>
+  <div class="container py-5">
+    <h2 class="my-4">Also Showing</h2>
+    <bmc-movies-grid [limit]="4" [columns]="4" [exclude]="movie.id!"></bmc-movies-grid>
+  </div>
+</ng-container>

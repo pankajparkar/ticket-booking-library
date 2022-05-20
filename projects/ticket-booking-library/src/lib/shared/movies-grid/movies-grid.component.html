@@ -1,0 +1,19 @@
+<ng-container *ngIf="movies$ | async as movies">
+  <div class="moviegrid">
+    <div class="row">
+      <!-- <div  >
+        <a href="javascript:void(0)" class="moviegrid-play-trailer" (click)="openModal(preview, getEmbedUrl(movie.trailer))"></a>
+        <a routerLink="/movie/{{ movie.id }}">
+          <img src="{{ movie.poster }}" alt="{{ movie.title }}" class="moviegrid-poster img-fluid" />
+          <span class="moviegrid-title">{{ movie.title }}</span>
+        </a>
+      </div> -->
+      <div *ngFor="let movie of movies" class="col-md-{{ 12 / columns }}">
+        <bmc-movie-preview-card
+          [movie]="movie"
+        >
+        </bmc-movie-preview-card>
+      </div>
+    </div>
+  </div>
+</ng-container>
